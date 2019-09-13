@@ -1,0 +1,10 @@
+infile = 'input_num.txt';
+data = load(infile, '-ascii');
+x = data(:,1);
+y = data(:,2);
+a = 3.5;
+ans1 = linear_spline(x, y, a);
+ans2 = lagrange_interpolation(a,x,y);
+ans3 = lagrange_interpolation(x,x,y);
+plot(a, ans1, 'o');
+plot(a, ans2, 'o');

@@ -1,0 +1,14 @@
+function Y = yPredicted(A, X)%A is Basically The Value of The Constants a0,a1.. from polyRegress
+t=size(X);
+sizeY=t(2);
+
+
+for i=1:sizeY
+
+    y(i)=A(1);
+    for j=2:size(A)
+    y(i)=Y(i)+A(j)*(X(i,j));
+    end
+    
+end
+
